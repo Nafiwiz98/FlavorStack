@@ -1,0 +1,92 @@
+🧱 Phase 1: Project Architecture & Planning
+🔹 Define the App’s Purpose
+FlavorStack is a recipe-sharing platform where users can:
+- Browse and search for recipes
+- Submit their own with images
+- Save favorites
+- View full recipe details
+🔹 Decide on the Stack
+You’ll use the MERN stack:
+- MongoDB Atlas for storing recipes and user data
+- Express.js for backend API
+- React for frontend UI
+- Node.js to run the server
+You’ll also use:
+- Cloudinary for image hosting
+- JWT for authentication
+- Render + Vercel for deployment
+
+🧩 Phase 2: Backend Design
+🔹 Data Models
+You’ll need two main models:
+- User: stores login info, saved recipes
+- Recipe: stores title, ingredients, instructions, image URL, tags, author
+🔹 API Routes
+Plan RESTful endpoints like:
+- GET /recipes → fetch all
+- POST /recipes → create new
+- GET /recipes/:id → view one
+- PATCH /recipes/:id → update
+- DELETE /recipes/:id → remove
+- POST /auth/login 
+- POST /auth/register
+🔹 Middleware
+Use middleware for:
+- Auth protection (JWT verification)
+- File upload handling (Multer)
+- Error handling and validation
+
+🎨 Phase 3: Frontend Flow
+🔹 Pages to Build
+- Home: list of recipes
+- Add Recipe: form with image upload
+- Recipe Detail: full view of one recipe
+- Login/Register: auth flow
+- Profile: user’s saved and submitted recipes
+🔹 State Management
+Use React hooks and context to manage:
+- Auth state
+- Recipe data
+- Form inputs
+- Loading and error states
+🔹 Routing
+Use React Router for navigation:
+- / → Home
+- /add → Add Recipe
+- /recipe/:id → Detail view
+- /login and /register
+- /profile
+
+🖼️ Phase 4: Image Upload Strategy
+You’ll use:
+- Multer to intercept and store the image in memory
+- Cloudinary to host the image and return a URL
+- Save that URL in MongoDB with the recipe
+This keeps your server stateless and scalable.
+
+🔐 Phase 5: Authentication
+Use JWT to:
+- Register and log in users
+- Protect routes like “Add Recipe”
+- Store token in localStorage
+- Decode token to get user info
+
+🚀 Phase 6: Deployment Plan
+- Backend → Render (auto-deploy from GitHub)
+- Frontend → Vercel (optimized for React)
+- Database → MongoDB Atlas (cloud-hosted)
+- Image Hosting → Cloudinary (CDN-powered)
+You’ll configure .env files, set up CORS, and test everything end-to-end.
+
+🧠 Phase 7: Polish & Scale
+Once the core app works:
+- Add search and filtering
+- Make it mobile-friendly
+- Add user profiles and favorites
+- Track views or likes
+- Write a clean README and deploy
+   
+
+
+
+   mongodb+srv://flavor-stack:flavostack2025/26@cluster0.jjprk08.mongodb.net/
