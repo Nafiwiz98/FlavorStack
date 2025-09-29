@@ -86,7 +86,3 @@ Once the core app works:
 - Track views or likes
 - Write a clean README and deploy
    
-
-
-
-   mongodb+srv://flavor-stack:flavostack2025/26@cluster0.jjprk08.mongodb.net/

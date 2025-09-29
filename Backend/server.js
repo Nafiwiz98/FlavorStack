@@ -1,11 +1,9 @@
 import express from "express";
 import { connectDb } from "./Config/db.js";
+import userRouter from "./Routers/userRouter.js";
 
 const app = express();
-
-app.get("/", (req, res) => {
-  res.json("Building backend for Flavor-Stack");
-});
+app.use('/api/user', userRouter)
 
 try {
   await connectDb();
