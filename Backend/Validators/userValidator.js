@@ -4,19 +4,23 @@ const registrationValidationSchema = checkSchema({
   username: {
     notEmpty: {
       errorMessage: "username is required.",
+      bail: true,
     },
   },
   email: {
     notEmpty: {
       errorMessage: "email is required.",
+      bail: true,
     },
     isEmail: {
       errorMessage: "Please Provide valid email",
+      bail: true,
     },
   },
   password: {
     notEmpty: {
       errorMessage: "Password is required",
+      bail: true,
     },
   },
 });
